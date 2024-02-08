@@ -21,10 +21,10 @@ app.use(express.static(path.resolve(__dirname, './build')));
 const openai = new OpenAI({
 	apiKey: process.env.OPENAI_API_KEY,
 });
-app.use('/',async(req,res)=>{
+// app.use('/',async(req,res)=>{
 
-	res.send("server is running ")
-})
+// 	res.send("server is running ")
+// })
 
 app.post('/api', async (req, res) => {
    debugger;
