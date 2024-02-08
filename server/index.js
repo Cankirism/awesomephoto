@@ -7,8 +7,8 @@ const OpenAI = require('openai');
 const app = express();
 const options = [
 	cors({
-		origin:'*',
-		methods:'*',
+		origin:'*'
+		
 		
 	})
 
