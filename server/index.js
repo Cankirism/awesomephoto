@@ -26,33 +26,33 @@ app.use("/",async(req,res)=>{
 	res.send("server is running ");
 })
 
-// app.post('/api', async (req, res) => {
-//    debugger;
-// 	try {
+app.post('/api', async (req, res) => {
+   debugger;
+	try {
 		
-// 		console.log("api side",req.body);
-// 		const { prompt } = req.body;
-// 		console.log(prompt);
-// 		const response = await openai.images.generate({
-// 			prompt,
-// 			n: 1,
-// 			size: "512x512",
-// 			response_format: 'b64_json',
-// 		});
-// 		// const response = await openai.createImage({
+		console.log("api side",req.body);
+		const { prompt } = req.body;
+		console.log(prompt);
+		const response = await openai.images.generate({
+			prompt,
+			n: 1,
+			size: "512x512",
+			response_format: 'b64_json',
+		});
+		// const response = await openai.createImage({
 
-// 		// 	prompt:prompt,
-// 		// 	n:1,
-// 		// 	size:"512x512",
-// 		// });
-// 		console.log(response);
-// 		const image = response.data[0].b64_json;
-// 		res.status(200).json({ photo: image });
+		// 	prompt:prompt,
+		// 	n:1,
+		// 	size:"512x512",
+		// });
+		console.log(response);
+		const image = response.data[0].b64_json;
+		res.status(200).json({ photo: image });
 
-// 	}
-// 	catch (error) { console.log("hata olustu",error); }
+	}
+	catch (error) { console.log("hata olustu",error); }
 
-// });
+});
 app.listen(6000,()=>console.log("server staerted on port 6000"));
 
 
