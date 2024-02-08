@@ -33,16 +33,16 @@ app.post('/api', async (req, res) => {
 		console.log("api side",req.body);
 		const { prompt } = req.body;
 		console.log(prompt);
-		// const response = await openai.images.generate({
-		// 	prompt,
-		// 	n: 1,
-		// 	size: "512x512",
-		// 	response_format: 'b64_json',
-		// });
+		const response = await openai.images.generate({
+			prompt,
+			n: 1,
+			size: "512x512",
+			response_format: 'b64_json',
+		});
 		
-		// console.log(response);
-		// const image = response.data[0].b64_json;
-		// res.status(200).json({ photo: image });
+		console.log(response);
+		const image = response.data[0].b64_json;
+		res.status(200).json({ photo: image });
 
 	}
 	catch (error) { console.log("hata olustu",error); }
