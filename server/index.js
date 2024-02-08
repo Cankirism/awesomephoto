@@ -52,7 +52,7 @@ app.post('/api', async (req, res) => {
 	catch (error) { console.log("hata olustu",error); }
 
 });
-app.listen(5000,()=>console.log("server staerted on port 5000"));
+app.listen(6000,()=>console.log("server staerted on port 6000"));
 
 
 
