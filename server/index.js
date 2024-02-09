@@ -25,7 +25,7 @@ const openai = new OpenAI({
 
 // 	res.send("server is running ");
 // })
-
+console.log(process.env.OPENAI_API_KEY)
 app.post('/api', async (req, res) => {
    debugger;
 	try {
