@@ -45,7 +45,9 @@ app.post('/api', async (req, res) => {
 		res.status(200).json({ photo: image });
 
 	}
-	catch (error) { console.log("hata olustu",error); }
+	catch (error) { 
+		res.send(error);
+		console.log("hata olustu",error); }
 
 });
 app.listen(6000,()=>console.log("server staerted on port 6000"));
