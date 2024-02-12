@@ -13,7 +13,7 @@ const App = () => {
 		photo: null,
 		altText: null,
 	});
-    const api_endpoint = process.env.API_ENDPOINT;
+    const api_endpoint = "https://awesomephoto.vercel.app/api";
 	
 	const generateImage = async (prompt, setPrompt) => {
 		if (prompt) {
@@ -22,7 +22,7 @@ const App = () => {
 				setIsGenerating(true);
 				console.log(JSON.stringify({prompt}));
 				const response = await fetch(
-					`http://localhost:5000/api`,
+					api_endpoint,
 					
 					{
 						method: 'POST',
@@ -48,7 +48,7 @@ const App = () => {
 				setIsGenerating(false);}
 				
 		} else {
-			alert('Please provide proper prompt');
+			alert('Lütfen içerik giriniz');
 		}
 	};
 
@@ -81,7 +81,7 @@ const App = () => {
 						className="btn"
 						onClick={() => downloadImage(generatedImage.photo)}
 					>
-						Download
+						Resmi Kaydet
 					</button>
 				</div>
 			</main>

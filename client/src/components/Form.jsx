@@ -13,15 +13,15 @@ const Form = ({ generateImage }) => {
     return (
         <div className="form-section">
             <div className="container-title">
-                <h1 className="title">Awesome Image Generator Powerd by Ai</h1>
+                <h1 className="title">Yapay Zeka Tabanlı Resim Oluşturma Motoru</h1>
                
             </div>
             <div className="form-container">
                 <div className="input-div">
-                    <label>Prompt</label>
-                    <span>İçeriği girin ve yapay zeka ile oluşturulan fotoğrafın tadını çıkartın </span>
+                    <label>İçerik</label>
+                    <span>İçeriği girin ve yapay zeka ile oluşturulan fotoğrafın tadını çıkartın(İngilizce içerik girilmesi tavsiye edilir..) </span>
                     <div className="input-cont">
-                        <textarea name="prompt" id="" cols="30" rows="4" value={prompt} onChange={(e) => setPrompt(e.target.value)} className="form-control" placeholder="A black horse near the lake"></textarea>
+                        <textarea name="prompt" id="" cols="30" rows="4" value={prompt} onChange={(e) => setPrompt(e.target.value)} className="form-control" placeholder="A black horse walking around  the lake"></textarea>
                         <FaRandom onClick={handleRandomPrompt} className='random-icon' />
                     </div>
                 </div>

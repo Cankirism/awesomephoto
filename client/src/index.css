@@ -34,23 +34,42 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+@media (max-width:750px){
+  .container{
+    width: 400px;
+ 
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  
+
+  }
+}
 
 .kinsta-logo {
-  width: 100px;
+  width: 150px;
   margin: 50px 0;
 }
 
 .flex-container {
-  display: flex;
+  display:flex;
   align-items: center;
   gap: 10px;
 }
+@media (max-width:600px) {
+  .flex-container{
+    display:contents;
+  }
+  
+}
+
 
 .form-section {
   flex-basis: 60%;
   background-color: #111319;
   border-radius: 10px;
-  padding: 40px 60px;
+  padding: 60px 60px;
   border: 2px solid #5c5c5c;
 }
 
@@ -152,7 +171,7 @@ textarea {
 
 .imgg {
   width: 100%;
-  object-fit: cover;
+  object-fit:cover;
   border-radius: 10px;
   border: 2px solid #5c5c5c;
 }
